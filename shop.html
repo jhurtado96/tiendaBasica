@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styleShop.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>ShopOnline</title>
+    <script src="Productos.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Hurtado Shopping</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="category.html">Categorias <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Carrito</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacto</a>
+                    </li>
+                </ul>
+    
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="input-group input-group-sm">
+                        
+                    <button id="skate" type="button" onclick="mostrarCarritoPrecio()" class="btn btn-success btn-block">Tu carrito</button>
+                    
+                </form>
+            </div>
+        </div>
+    </nav>
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Hurtado Shopping está de rebajas</h1>
+            <p class="lead text-muted mb-0">En estas rebajas podrás adquirir multitud de productos a precios de escándalo.</p>
+            <p id="contenidoCarrito" class="p-2 bg-success text-white">Aquí aparecerá el contenido de tu carrito</p>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="category.html">Category</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Sub-category</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="img/skate.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="product.html" title="View Product">Skate</a></h4>
+                                <p class="card-text">Skate clásico con recambio de ruedas.</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="btn btn-danger btn-block">99.00 €</p>
+                                    </div>
+                                    <div class="col">
+                                        <button id="skate" type="button" onclick="meterEnCarrito(skate)" class="btn btn-success btn-block">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="img/camiseta.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="product.html" title="View Product">Camiseta Blanca</a></h4>
+                                <p class="card-text">Camiseta blanca cláscia.</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="btn btn-danger btn-block">19.00 $</p>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" onclick="meterEnCarrito(camiseta)" class="btn btn-success btn-block">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="img/ordenador.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="product.html" title="View Product">Ordenador Gaming</a></h4>
+                                <p class="card-text">Ordenador Gaming para jugar a videojuegos.</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="btn btn-danger btn-block">1999.00 $</p>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" onclick="meterEnCarrito(ordenador)" class="btn btn-success btn-block">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="img/pistola.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="product.html" title="View Product">Pistola Rosa</a></h4>
+                                <p class="card-text">Pistola de agua para los peques de la casa</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="btn btn-danger btn-block">199.00 $</p>
+                                    </div>
+                                    <div class="col">
+                                         <button type="button" onclick="meterEnCarrito(pistola)" class="btn btn-success btn-block">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="img/rodillo.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="product.html" title="View Product">Rodillo</a></h4>
+                                <p class="card-text">Para pintar.</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="btn btn-danger btn-block">29.00 $</p>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" onclick="meterEnCarrito(rodillo)" class="btn btn-success btn-block">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="img/carne.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="product.html" title="View Product">Carne de primera</a></h4>
+                                <p class="card-text">Para barbacoas.</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="btn btn-danger btn-block">99.00 $</p>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" onclick="meterEnCarrito(carne)" class="btn btn-success btn-block">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="img/cascos.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="product.html" title="View Product">Casco</a></h4>
+                                <p class="card-text">Para la moto o bicicleta.</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="btn btn-danger btn-block">69.00 $</p>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" onclick="meterEnCarrito(casco)" class="btn btn-success btn-block">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="img/filete.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="product.html" title="View Product">Filete de primera</a></h4>
+                                <p class="card-text">Para barbacoas.</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="btn btn-danger btn-block">49.00 $</p>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" onclick="meterEnCarrito(filete)" class="btn btn-success btn-block">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="img/casa.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="product.html" title="View Product">Alquila una casa por semanas</a></h4>
+                                <p class="card-text">Para una semana de lujo.</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="btn btn-danger btn-block">500.00 $</p>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" onclick="meterEnCarrito(casa)" class="btn btn-success btn-block">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <nav aria-label="...">
+                            <ul class="pagination">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-4 col-xl-3">
+                    <h5>About</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <p class="mb-0">
+                        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
+                    </p>
+                </div>
+    
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                    <h5>Informations</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <ul class="list-unstyled">
+                        <li><a href="">Link 1</a></li>
+                        <li><a href="">Link 2</a></li>
+                        <li><a href="">Link 3</a></li>
+                        <li><a href="">Link 4</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
+                    <h5>Others links</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <ul class="list-unstyled">
+                        <li><a href="">Link 1</a></li>
+                        <li><a href="">Link 2</a></li>
+                        <li><a href="">Link 3</a></li>
+                        <li><a href="">Link 4</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-md-4 col-lg-3 col-xl-3">
+                    <h5>Contact</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-home mr-2"></i> My company</li>
+                        <li><i class="fa fa-envelope mr-2"></i> email@example.com</li>
+                        <li><i class="fa fa-phone mr-2"></i> + 33 12 14 15 16</li>
+                        <li><i class="fa fa-print mr-2"></i> + 33 12 14 15 16</li>
+                    </ul>
+                </div>
+               
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
